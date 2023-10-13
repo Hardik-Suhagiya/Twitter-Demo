@@ -13,8 +13,7 @@ extension UIViewController {
     typealias CompletionHandler = () -> Void
     
     //MARK: - FUNCTIIONS
-    func setupLeftBarItem(image: UIImage, width: CGFloat = 40, height: CGFloat = 40, completion: @escaping CompletionHandler) {
-        
+    func setupLeftBarItem(image: UIImage, width: CGFloat = 35, height: CGFloat = 35, completion: @escaping CompletionHandler) {
         let action = UIAction(title: "") { action in
             completion()
         }
@@ -27,6 +26,15 @@ extension UIViewController {
         button.heightAnchor.constraint(equalToConstant: height).isActive = true
         let barButton = UIBarButtonItem(customView: button)
         navigationItem.leftBarButtonItem = barButton
-        
+    }
+    
+    func setupTitleImage(image: UIImage, width: CGFloat = 40, height: CGFloat = 40) {
+        let imageView = UIImageView(image: image)
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.widthAnchor.constraint(equalToConstant: width).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: height).isActive = true
+        navigationItem.titleView = imageView
     }
 }

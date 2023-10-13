@@ -31,6 +31,7 @@ extension HomeVC {
     }
     
     private func setUpNavigationBar() {
+        setupTitleImage(image: UIImage(named:"ic_logo")!)
         setupLeftBarItem(image: UIImage(named:"ic_profile")!, completion: {()-> Void in
             
         })
