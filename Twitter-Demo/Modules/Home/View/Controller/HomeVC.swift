@@ -9,11 +9,10 @@ import UIKit
 
 class HomeVC: UIViewController {
     //MARK: - OUTLET
-    @IBOutlet weak var tblHome: UITableView!
+    @IBOutlet weak var tblFeed: UITableView!
     
     //MARK: - PROPERTIES
-    
-    
+    let refreshControl = UIRefreshControl()
     
     //MARK: - VIEW CONTROLLER LIFE CYCLE
     override func viewDidLoad() {
@@ -21,13 +20,13 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
         initialSetUp()
     }
-  
 }
 
 //MARK: - UI FUNCTION
 extension HomeVC {
     private func initialSetUp() {
         setUpNavigationBar()
+        configureTableView()
     }
     
     private func setUpNavigationBar() {
