@@ -110,20 +110,22 @@ extension FeedTableCell {
     //MARK: - INITIALIZE VIDEO PLAYER
     func initializeVideoPlayer() {
         if let videoPath = Bundle.main.path(forResource: "demoVideo", ofType: "mp4") {
-            //initialise player from local asset
-            let videoURL = URL(fileURLWithPath: videoPath)
-            let playerItem = AVPlayerItem(url: videoURL)
-            player = AVPlayer(playerItem: playerItem)
-            
-            //intialise and player layer
-            let playerLayer = AVPlayerLayer(player: player)
-            playerLayer.frame = videoViewContainer.bounds
-            playerLayer.videoGravity = .resizeAspect
-            videoViewContainer.layer.addSublayer(playerLayer)
-            NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
-            
-            //keep play button front of all
-            videoViewContainer.bringSubviewToFront(btnPlay)
+            DispatchQueue.main.async {
+                //initialise player from local asset
+                let videoURL = URL(fileURLWithPath: videoPath)
+                let playerItem = AVPlayerItem(url: videoURL)
+                self.player = AVPlayer(playerItem: playerItem)
+                
+                //intialise and player layer
+                let playerLayer = AVPlayerLayer(player:  self.player)
+                playerLayer.frame =  self.videoViewContainer.bounds
+                playerLayer.videoGravity = .resizeAspect
+                self.videoViewContainer.layer.addSublayer(playerLayer)
+                NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: self.player?.currentItem)
+                
+                //keep play button front of all
+                self.videoViewContainer.bringSubviewToFront(self.btnPlay)
+            }
         }
     }
     

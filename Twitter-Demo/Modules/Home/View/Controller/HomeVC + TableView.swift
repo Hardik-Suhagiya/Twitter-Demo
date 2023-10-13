@@ -27,8 +27,17 @@ extension HomeVC {
     @objc func handleTopRefresh(_ sender:UIRefreshControl) {
         sender.endRefreshing()
     }
+    
+    //MARK: - IS CELL VISIBLE
+    func isCellVisible(indexPath: IndexPath) -> Bool {
+        guard let visibleIndexPaths = tblFeed.indexPathsForVisibleRows else {
+            return false
+        }
+        return visibleIndexPaths.contains(indexPath)
+    }
 }
 
+//MARK: - TABLEVIEW DELEGATE & DATA-SOURCE
 extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,14 +59,11 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? FeedTableCell {
-            if let player = cell.player {
-                if self.isCellVisible(indexPath: indexPath) {
-                    cell.playVideo()
-                } else {
-                    cell.pauseVideo()
-                }
+            if self.isCellVisible(indexPath: indexPath) {
+                cell.playVideo()
+            } else {
+                cell.pauseVideo()
             }
-            
         }
     }
     
@@ -65,12 +71,5 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         if let cell = cell as? FeedTableCell {
             cell.pauseVideo()
         }
-    }
-    
-    func isCellVisible(indexPath: IndexPath) -> Bool {
-        guard let visibleIndexPaths = tblFeed.indexPathsForVisibleRows else {
-            return false
-        }
-        return visibleIndexPaths.contains(indexPath)
     }
 }
