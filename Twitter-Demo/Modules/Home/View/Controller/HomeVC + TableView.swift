@@ -41,7 +41,10 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableCell", for: indexPath) as? FeedTableCell else { return  UITableViewCell() }
-       
+        cell.commentClicked = {}
+        cell.retweetClicked = {}
+        cell.likeClicked = {}
+        cell.viewsClicked = {}
         return cell
     }
 }

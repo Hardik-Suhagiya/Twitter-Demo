@@ -30,7 +30,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="exH-m2-WUd">
-                        <rect key="frame" x="59.999999999999986" y="8" width="143.66666666666663" height="30"/>
+                        <rect key="frame" x="59.999999999999986" y="8" width="142.66666666666663" height="30"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Hardik" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfk-wX-dBm">
                                 <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="30"/>
@@ -57,8 +57,8 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="@hardik.1d" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9FS-wb-PaI">
-                                <rect key="frame" x="68.333333333333343" y="0.0" width="75.333333333333343" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <rect key="frame" x="68.333333333333343" y="0.0" width="74.333333333333343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -75,6 +75,9 @@
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" image="ic_menu"/>
+                        <connections>
+                            <action selector="btnOptionClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wWx-LA-KyD"/>
+                        </connections>
                     </button>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hFh-VJ-EPs">
                         <rect key="frame" x="60" y="38" width="248" height="396"/>
@@ -82,7 +85,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-oR-U8l">
                                 <rect key="frame" x="0.0" y="0.0" width="248" height="117"/>
                                 <string key="text">Yes, there are some great robot fight scenes, nefarious villains, a few human interest plotlines, even characters that seem like genuine people, but the new movie Iron Man is really about the lab, and its ridiculously cool toys.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,6 +94,11 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nlv-IK-YpH" secondAttribute="height" multiplier="1:1" id="VuS-Nu-hXt"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="xse-et-Jll">
                                 <rect key="frame" x="0.0" y="381" width="248" height="15"/>
@@ -107,7 +115,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="548" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz2-5y-Nd3">
                                                 <rect key="frame" x="18" y="0.0" width="30" height="15"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -125,14 +133,14 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5310" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlb-D8-ol1">
                                                 <rect key="frame" x="18" y="0.0" width="36" height="15"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="mmM-iL-gUi">
-                                        <rect key="frame" x="107.99999999999999" y="0.0" width="60.333333333333329" height="15"/>
+                                        <rect key="frame" x="108" y="0.0" width="60" height="15"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_like_empty" translatesAutoresizingMaskIntoConstraints="NO" id="WAA-z1-zIR">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -142,15 +150,15 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="85.2K" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsP-Ln-dPe">
-                                                <rect key="frame" x="18.000000000000004" y="0.0" width="42.333333333333343" height="15"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <rect key="frame" x="18" y="0.0" width="42" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="fd5-lK-IVs">
-                                        <rect key="frame" x="171.33333333333334" y="0.0" width="58.666666666666657" height="15"/>
+                                        <rect key="frame" x="171" y="0.0" width="59" height="15"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_graph" translatesAutoresizingMaskIntoConstraints="NO" id="QDt-X9-kaC">
                                                 <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
@@ -160,8 +168,8 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="5.2M" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKH-3R-uVm">
-                                                <rect key="frame" x="17.999999999999996" y="0.0" width="40.666666666666657" height="15"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <rect key="frame" x="18" y="0.0" width="41" height="15"/>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -200,6 +208,25 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="btnOption" destination="a1e-CJ-f2O" id="cLy-Cv-Tai"/>
+                <outlet property="imgLike" destination="WAA-z1-zIR" id="ebw-w3-iba"/>
+                <outlet property="imgPost" destination="nlv-IK-YpH" id="QLE-PT-ObI"/>
+                <outlet property="imgProfile" destination="sIz-QL-FTT" id="se1-ut-wll"/>
+                <outlet property="imgVerified" destination="lmu-vm-7Bg" id="96s-so-pBm"/>
+                <outlet property="lblCommentCount" destination="zz2-5y-Nd3" id="fLY-PX-Fo7"/>
+                <outlet property="lblHandlerName" destination="9FS-wb-PaI" id="d5t-9U-Zkv"/>
+                <outlet property="lblLikeCount" destination="JsP-Ln-dPe" id="OGG-JE-Ubn"/>
+                <outlet property="lblName" destination="Mfk-wX-dBm" id="3w6-Y9-Jen"/>
+                <outlet property="lblRetweetCount" destination="dlb-D8-ol1" id="OsR-5q-UNa"/>
+                <outlet property="lblTextPost" destination="cyc-oR-U8l" id="DH7-Fg-TU6"/>
+                <outlet property="lblViewCount" destination="VKH-3R-uVm" id="byQ-14-6FX"/>
+                <outlet property="stackCommentContainer" destination="ROv-f7-g0V" id="ov0-DZ-ZRK"/>
+                <outlet property="stackLikeContainer" destination="mmM-iL-gUi" id="qKg-su-g38"/>
+                <outlet property="stackRetweetContainer" destination="9Xc-N4-10V" id="ARo-z9-abq"/>
+                <outlet property="stackUploadContainer" destination="zcU-gv-FkU" id="eY9-Fk-ETj"/>
+                <outlet property="stackViewContainer" destination="fd5-lK-IVs" id="CZj-td-T4f"/>
+            </connections>
             <point key="canvasLocation" x="83.969465648854964" y="85.211267605633807"/>
         </tableViewCell>
     </objects>
