@@ -256,6 +256,7 @@
                 <outlet property="stackUploadContainer" destination="zcU-gv-FkU" id="eY9-Fk-ETj"/>
                 <outlet property="stackViewContainer" destination="fd5-lK-IVs" id="CZj-td-T4f"/>
                 <outlet property="videoViewContainer" destination="rfM-Cf-iSA" id="yxw-Xy-q7m"/>
+                <outlet property="viewImgVerifiedContainer" destination="Z44-Q1-pFf" id="zHt-tL-UIx"/>
             </connections>
             <point key="canvasLocation" x="83.969465648854964" y="173.2394366197183"/>
         </tableViewCell>

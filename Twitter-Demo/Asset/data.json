@@ -55,5 +55,19 @@
         "retweetCount": "741K",
         "likesCount": "60K",
         "viewsCount": "150M"
+    },
+    {
+        "profileImage": "ic_profile2",
+        "name":"Karan",
+        "handlerName": "heyKaran",
+        "isVerified": true,
+        "postTime": "15h",
+        "postText": "Yes, there are some great robot fight scenes, nefarious villains, a few human interest plotlines, even characters that seem like genuine people, but the new movie Iron Man is really about the lab, and its ridiculously cool toys.",
+        "postImage": "",
+        "postVideo": "",
+        "commentCount": "600",
+        "retweetCount": "789",
+        "likesCount": "85.2K",
+        "viewsCount": "2.9M"
     }
 ]

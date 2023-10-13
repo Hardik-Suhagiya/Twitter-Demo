@@ -12,6 +12,7 @@ class FeedTableCell: UITableViewCell {
     //MARK: - OUTLET
     @IBOutlet weak var imgProfile: UIImageView!
     @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var viewImgVerifiedContainer: UIView!
     @IBOutlet weak var imgVerified: UIImageView!
     @IBOutlet weak var lblHandlerName: UILabel!
     @IBOutlet weak var btnOption: UIButton!
@@ -53,7 +54,9 @@ class FeedTableCell: UITableViewCell {
                 }
                 
                 //isVerified
-                self.imgVerified.isHidden = self.feedData?.isVerified ?? false
+                self.viewImgVerifiedContainer.isHidden = self.feedData?.isVerified ?? false
+                
+                //handlerName
                 if let handlerName = self.feedData?.handlerName {
                     self.lblHandlerName.text = "@\(handlerName)"
                     
