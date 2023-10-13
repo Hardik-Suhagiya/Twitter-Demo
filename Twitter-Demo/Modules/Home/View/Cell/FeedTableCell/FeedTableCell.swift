@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FeedTableCell: UITableViewCell {
     //MARK: - OUTLET
@@ -26,6 +27,8 @@ class FeedTableCell: UITableViewCell {
     @IBOutlet weak var stackViewContainer: UIStackView!
     @IBOutlet weak var lblViewCount: UILabel!
     @IBOutlet weak var stackUploadContainer: UIStackView!
+    @IBOutlet weak var videoViewContainer: UIView!
+    @IBOutlet weak var btnPlay: UIButton!
     
     //MARK: - PROPERTIES
     var optionBtnClicked: (() -> Void)?
@@ -33,13 +36,21 @@ class FeedTableCell: UITableViewCell {
     var retweetClicked: (() -> Void)?
     var likeClicked: (() -> Void)?
     var viewsClicked: (() -> Void)?
+    var player: AVPlayer?
+    
+    //MARK: - DeInit
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
     
     //MARK: - FUNCTIONS
     override func awakeFromNib() {
         super.awakeFromNib()
         //add gesture
         addGesture()
+        initializeVideoPlayer()
     }
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -86,5 +97,62 @@ class FeedTableCell: UITableViewCell {
     // MARK: - BUTTON ACTIONS
     @IBAction func btnOptionClicked(_ sender: UIButton) {
         optionBtnClicked?()
+    }
+    
+    @IBAction func btnPlayClicked(_ sender: UIButton) {
+        self.playVideo()
+    }
+    
+}
+
+extension FeedTableCell {
+    
+    //MARK: - INITIALIZE VIDEO PLAYER
+    func initializeVideoPlayer() {
+        if let videoPath = Bundle.main.path(forResource: "demoVideo", ofType: "mp4") {
+            //initialise player from local asset
+            let videoURL = URL(fileURLWithPath: videoPath)
+            let playerItem = AVPlayerItem(url: videoURL)
+            player = AVPlayer(playerItem: playerItem)
+            
+            //intialise and player layer
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = videoViewContainer.bounds
+            playerLayer.videoGravity = .resizeAspect
+            videoViewContainer.layer.addSublayer(playerLayer)
+            NotificationCenter.default.addObserver(self, selector: #selector(playerDidFinishPlaying), name: .AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
+            
+            //keep play button front of all
+            videoViewContainer.bringSubviewToFront(btnPlay)
+        }
+    }
+    
+    //MARK: - PLAYER OBSERVER
+    @objc func playerDidFinishPlaying(note: NSNotification) {
+        showPlayButton()
+    }
+    
+    //MARK: - HIDE SHOW PLAY BUTTON
+    func showPlayButton() {
+        btnPlay.isHidden = false
+    }
+    
+    func hidePlayButton() {
+        btnPlay.isHidden = true
+    }
+    
+    //MARK: - PLAY VIDEO
+    func playVideo() {
+        //if player ends then start from beginning
+        if  player?.currentItem?.currentTime() ==  player?.currentItem?.duration {
+            player?.seek(to: CMTime.zero)
+        }
+        player?.play()
+        hidePlayButton()
+    }
+    //MARK: - PAUSE VIDEO
+    func pauseVideo() {
+        player?.pause()
+        showPlayButton()
     }
 }

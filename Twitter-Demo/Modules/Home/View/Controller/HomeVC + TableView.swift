@@ -47,4 +47,27 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
         cell.viewsClicked = {}
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? FeedTableCell {
+            if self.isCellVisible(indexPath: indexPath),  cell.player != nil {
+                cell.playVideo()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if let cell = cell as? FeedTableCell {
+            if self.isCellVisible(indexPath: indexPath),  cell.player != nil {
+                cell.pauseVideo()
+            }
+        }
+    }
+    
+    func isCellVisible(indexPath: IndexPath) -> Bool {
+        guard let visibleIndexPaths = tblFeed.indexPathsForVisibleRows else {
+            return false
+        }
+        return visibleIndexPaths.contains(indexPath)
+    }
 }

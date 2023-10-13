@@ -18,6 +18,7 @@
 		041FD24C2AD844DE00CD5AEE /* HomeVC + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FD24B2AD844DE00CD5AEE /* HomeVC + TableView.swift */; };
 		0494731A2AD92DEC00EAFE3C /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049473182AD92DEC00EAFE3C /* FeedTableCell.swift */; };
 		0494731B2AD92DEC00EAFE3C /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049473192AD92DEC00EAFE3C /* FeedTableCell.xib */; };
+		0494731E2AD9603700EAFE3C /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0494731D2AD9603600EAFE3C /* demoVideo.mp4 */; };
 		04FE85932AD8F79A001DB089 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE85922AD8F79A001DB089 /* UIViewController + Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		041FD24B2AD844DE00CD5AEE /* HomeVC + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC + TableView.swift"; sourceTree = "<group>"; };
 		049473182AD92DEC00EAFE3C /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
 		049473192AD92DEC00EAFE3C /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
+		0494731D2AD9603600EAFE3C /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoVideo.mp4; sourceTree = "<group>"; };
 		04FE85922AD8F79A001DB089 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 			children = (
 				041FD23E2AD8427C00CD5AEE /* Modules */,
 				04FE858F2AD8F764001DB089 /* Helper */,
+				0494731C2AD9600900EAFE3C /* Asset */,
 				041FD22A2AD841B100CD5AEE /* AppDelegate.swift */,
 				041FD22C2AD841B100CD5AEE /* SceneDelegate.swift */,
 				041FD2302AD841B100CD5AEE /* Main.storyboard */,
@@ -149,6 +152,14 @@
 			path = FeedTableCell;
 			sourceTree = "<group>";
 		};
+		0494731C2AD9600900EAFE3C /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				0494731D2AD9603600EAFE3C /* demoVideo.mp4 */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		04FE858F2AD8F764001DB089 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041FD2372AD841B200CD5AEE /* LaunchScreen.storyboard in Resources */,
+				0494731E2AD9603700EAFE3C /* demoVideo.mp4 in Resources */,
 				041FD2342AD841B200CD5AEE /* Assets.xcassets in Resources */,
 				0494731B2AD92DEC00EAFE3C /* FeedTableCell.xib in Resources */,
 				041FD2322AD841B100CD5AEE /* Main.storyboard in Resources */,
