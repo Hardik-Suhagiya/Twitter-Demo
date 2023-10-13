@@ -38,6 +38,85 @@ class FeedTableCell: UITableViewCell {
     var viewsClicked: (() -> Void)?
     var player: AVPlayer?
     
+    var feedData: HomeModel? {
+        didSet{
+            DispatchQueue.main.async {
+                
+                //profile image
+                if let profileImage = UIImage(named: self.feedData?.profileImage ?? "") {
+                    self.imgProfile.image = profileImage
+                }
+                
+                //name
+                if let name = self.feedData?.name {
+                    self.lblName.text = name
+                }
+                
+                //isVerified
+                self.imgVerified.isHidden = self.feedData?.isVerified ?? false
+                if let handlerName = self.feedData?.handlerName {
+                    self.lblHandlerName.text = "@\(handlerName)"
+                    
+                    if let postTime = self.feedData?.postTime {
+                        self.lblHandlerName.text?.append(" - \(postTime)")
+                    }
+                }
+                
+                //postText
+                if let postText = self.feedData?.postText, postText != "" {
+                    self.lblTextPost.isHidden = false
+                    self.lblTextPost.text = postText
+                } else {
+                    self.lblTextPost.isHidden = true
+                }
+                
+                //postImage
+                if let postImage = self.feedData?.postImage, postImage != "" {
+                    self.imgPost.isHidden = false
+                    self.imgPost.image = UIImage(named: postImage)
+                } else {
+                    self.imgPost.isHidden = true
+                }
+                
+                //postVideo
+                if let postVideo = self.feedData?.postVideo, postVideo != "" {
+                    self.videoViewContainer.isHidden = false
+                    self.initializeVideoPlayer(videoName: postVideo)
+                } else {
+                    self.videoViewContainer.isHidden = true
+                }
+                
+                //commentCount
+                if let commentCount = self.feedData?.commentCount, commentCount != "" {
+                    self.self.lblCommentCount.text = commentCount
+                } else {
+                    self.lblCommentCount.text = "0"
+                }
+                
+                //retweetCount
+                if let retweetCount = self.feedData?.retweetCount, retweetCount != "" {
+                    self.lblRetweetCount.text = retweetCount
+                } else {
+                    self.lblRetweetCount.text = "0"
+                }
+                
+                //likesCount
+                if let likesCount = self.feedData?.likesCount, likesCount != "" {
+                    self.lblLikeCount.text = likesCount
+                } else {
+                    self.lblLikeCount.text = "0"
+                }
+                
+                //viewsCount
+                if let viewsCount = self.feedData?.viewsCount, viewsCount != "" {
+                    self.lblViewCount.text = viewsCount
+                } else {
+                    self.lblViewCount.text = "0"
+                }
+            }
+        }
+    }
+    
     //MARK: - DeInit
     deinit {
         NotificationCenter.default.removeObserver(self)
@@ -48,7 +127,6 @@ class FeedTableCell: UITableViewCell {
         super.awakeFromNib()
         //add gesture
         addGesture()
-        initializeVideoPlayer()
     }
     
     
@@ -108,8 +186,8 @@ class FeedTableCell: UITableViewCell {
 extension FeedTableCell {
     
     //MARK: - INITIALIZE VIDEO PLAYER
-    func initializeVideoPlayer() {
-        if let videoPath = Bundle.main.path(forResource: "demoVideo", ofType: "mp4") {
+    func initializeVideoPlayer(videoName: String) {
+        if let videoPath = Bundle.main.path(forResource: videoName, ofType: "mp4") {
             DispatchQueue.main.async {
                 //initialise player from local asset
                 let videoURL = URL(fileURLWithPath: videoPath)

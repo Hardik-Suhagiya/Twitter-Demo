@@ -55,6 +55,7 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? FeedTableCell {
+            cell.feedData = viewModel.arrFeed[indexPath.row]
             if self.isCellVisible(indexPath: indexPath) {
                 cell.playVideo()
             } else {
