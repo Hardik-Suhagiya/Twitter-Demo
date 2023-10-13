@@ -16,9 +16,10 @@
 		041FD2482AD8439300CD5AEE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FD2472AD8439300CD5AEE /* HomeViewModel.swift */; };
 		041FD24A2AD8439F00CD5AEE /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FD2492AD8439F00CD5AEE /* HomeModel.swift */; };
 		041FD24C2AD844DE00CD5AEE /* HomeVC + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041FD24B2AD844DE00CD5AEE /* HomeVC + TableView.swift */; };
+		045D1F9B2AD991C3006A9DC3 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 045D1F9A2AD991C3006A9DC3 /* data.json */; };
+		045D1F9D2AD9940E006A9DC3 /* demoVideo1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 045D1F9C2AD9940E006A9DC3 /* demoVideo1.mp4 */; };
 		0494731A2AD92DEC00EAFE3C /* FeedTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049473182AD92DEC00EAFE3C /* FeedTableCell.swift */; };
 		0494731B2AD92DEC00EAFE3C /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 049473192AD92DEC00EAFE3C /* FeedTableCell.xib */; };
-		0494731E2AD9603700EAFE3C /* demoVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0494731D2AD9603600EAFE3C /* demoVideo.mp4 */; };
 		04FE85932AD8F79A001DB089 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE85922AD8F79A001DB089 /* UIViewController + Extension.swift */; };
 		105946E902F316CB46A37F2D /* Pods_Twitter_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D50A9762CB8E247821A4FCD /* Pods_Twitter_Demo.framework */; };
 /* End PBXBuildFile section */
@@ -35,9 +36,10 @@
 		041FD2472AD8439300CD5AEE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		041FD2492AD8439F00CD5AEE /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		041FD24B2AD844DE00CD5AEE /* HomeVC + TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC + TableView.swift"; sourceTree = "<group>"; };
+		045D1F9A2AD991C3006A9DC3 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		045D1F9C2AD9940E006A9DC3 /* demoVideo1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoVideo1.mp4; sourceTree = "<group>"; };
 		049473182AD92DEC00EAFE3C /* FeedTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableCell.swift; sourceTree = "<group>"; };
 		049473192AD92DEC00EAFE3C /* FeedTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
-		0494731D2AD9603600EAFE3C /* demoVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = demoVideo.mp4; sourceTree = "<group>"; };
 		04FE85922AD8F79A001DB089 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		4D50A9762CB8E247821A4FCD /* Pods_Twitter_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B0293FE6249D688E6D0E36 /* Pods-Twitter-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter-Demo.release.xcconfig"; path = "Target Support Files/Pods-Twitter-Demo/Pods-Twitter-Demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -162,7 +164,8 @@
 		0494731C2AD9600900EAFE3C /* Asset */ = {
 			isa = PBXGroup;
 			children = (
-				0494731D2AD9603600EAFE3C /* demoVideo.mp4 */,
+				045D1F9C2AD9940E006A9DC3 /* demoVideo1.mp4 */,
+				045D1F9A2AD991C3006A9DC3 /* data.json */,
 			);
 			path = Asset;
 			sourceTree = "<group>";
@@ -189,7 +192,6 @@
 				E25CC4050BC327F58C92A907 /* Pods-Twitter-Demo.debug.xcconfig */,
 				50B0293FE6249D688E6D0E36 /* Pods-Twitter-Demo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -261,8 +263,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045D1F9D2AD9940E006A9DC3 /* demoVideo1.mp4 in Resources */,
 				041FD2372AD841B200CD5AEE /* LaunchScreen.storyboard in Resources */,
-				0494731E2AD9603700EAFE3C /* demoVideo.mp4 in Resources */,
+				045D1F9B2AD991C3006A9DC3 /* data.json in Resources */,
 				041FD2342AD841B200CD5AEE /* Assets.xcassets in Resources */,
 				0494731B2AD92DEC00EAFE3C /* FeedTableCell.xib in Resources */,
 				041FD2322AD841B100CD5AEE /* Main.storyboard in Resources */,

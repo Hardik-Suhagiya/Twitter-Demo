@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct HomeModel: Codable {
+    let profileImage, name, handlerName: String?
+    let isVerified: Bool?
+    let postTime, postText, postImage, postVideo: String?
+    let commentCount, retweetCount, likesCount, viewsCount: String?
+}

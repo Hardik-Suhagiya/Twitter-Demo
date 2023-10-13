@@ -1,0 +1,59 @@
+
+[
+    {
+        "profileImage": "ic_profile1",
+        "name":"Hardik",
+        "handlerName": "hardikTweet",
+        "isVerified": true,
+        "postTime": "1d",
+        "postText": "Yes, there are some great robot fight scenes, nefarious villains, a few human interest plotlines, even characters that seem like genuine people, but the new movie Iron Man is really about the lab, and its ridiculously cool toys.",
+        "postImage": "ic_post1",
+        "postVideo": "",
+        "commentCount": "548",
+        "retweetCount": "5310",
+        "likesCount": "85.2K",
+        "viewsCount": "5.2M"
+    },
+    {
+        "profileImage": "ic_profile2",
+        "name":"Nikunj",
+        "handlerName": "NikunjHere",
+        "isVerified": false,
+        "postTime": "45m",
+        "postText": "Captain America: The First Avenger premiered at the El Capitan Theatre in Los Angeles on July 19, 2011, and was released in the United States on July 22, as part of Phase One of the MCU.",
+        "postImage": "",
+        "postVideo": "",
+        "commentCount": "29",
+        "retweetCount": "150",
+        "likesCount": "858",
+        "viewsCount": "4.5K"
+    },
+    {
+        "profileImage": "ic_profile3",
+        "name":"Kunj",
+        "handlerName": "KunjOfficial",
+        "isVerified": false,
+        "postTime": "45m",
+        "postText": "The Hulk is a superhero appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Jack Kirby, the character first appeared in the debut issue of The Incredible Hulk.",
+        "postImage": "ic_post2",
+        "postVideo": "",
+        "commentCount": "29",
+        "retweetCount": "150",
+        "likesCount": "858",
+        "viewsCount": "4.5K"
+    },
+    {
+        "profileImage": "ic_profile4",
+        "name":"DND",
+        "handlerName": "DndPlease",
+        "isVerified": true,
+        "postTime": "45m",
+        "postText": "Dungeons & Dragons is a fantasy tabletop role-playing game originally created and designed by Gary Gygax and Dave Arneson. The game was first published in 1974 by Tactical Studies Rules, Inc. It has been published by Wizards of the Coast, now a subsidiary of Hasbro, since 1997.",
+        "postImage": "",
+        "postVideo": "",
+        "commentCount": "980",
+        "retweetCount": "741K",
+        "likesCount": "60K",
+        "viewsCount": "150M"
+    }
+]

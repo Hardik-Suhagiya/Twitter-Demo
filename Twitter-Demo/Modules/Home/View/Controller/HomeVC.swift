@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     
     //MARK: - PROPERTIES
     let refreshControl = UIRefreshControl()
+    let viewModel = HomeViewModel()
     
     //MARK: - VIEW CONTROLLER LIFE CYCLE
     override func viewDidLoad() {
@@ -29,6 +30,7 @@ extension HomeVC {
     func initialSetUp() {
         setUpNavigationBar()
         setupSegment()
+        configure(with: viewModel)
         configureTableView()
     }
     
@@ -42,6 +44,15 @@ extension HomeVC {
         segmentControl.append(title: "For you")
         segmentControl.append(title: "Following")
         segmentControl.addTarget(self, action: #selector(changeIndex(segmentedControl:)), for: .valueChanged)
+    }
+}
+
+// MARK: - VIEWMODEL CONFIGURATION FUNCTION
+extension HomeVC {
+    func configure(with viewModel: HomeViewModel) {
+        viewModel.response = { [weak self] (success, message) in
+            self?.tblFeed.reloadData()
+        }
     }
 }
 
