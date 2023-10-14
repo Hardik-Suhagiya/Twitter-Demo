@@ -103,7 +103,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfM-Cf-iSA">
                                 <rect key="frame" x="0.0" y="375" width="248" height="248"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-ZA-IgS">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9o-ZA-IgS">
                                         <rect key="frame" x="109" y="109" width="30" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="30" id="kCb-Xj-OIP"/>
@@ -111,9 +111,6 @@
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="ic_play"/>
-                                        <connections>
-                                            <action selector="btnPlayClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Por-jm-tkQ"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

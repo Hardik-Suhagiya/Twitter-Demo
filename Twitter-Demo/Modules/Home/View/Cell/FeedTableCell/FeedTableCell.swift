@@ -153,6 +153,10 @@ class FeedTableCell: UITableViewCell {
         //View view
         let viewTap = UITapGestureRecognizer(target: self, action: #selector(handleViewTap(_:)))
         stackViewContainer.addGestureRecognizer(viewTap)
+        
+        //Video view container
+        let videoViewContainerTap = UITapGestureRecognizer(target: self, action: #selector(handleVideoViewContainerTap(_:)))
+        videoViewContainer.addGestureRecognizer(videoViewContainerTap)
     }
     
     //MARK: - GESTURE ACTIONS
@@ -172,15 +176,21 @@ class FeedTableCell: UITableViewCell {
         viewsClicked?()
     }
     
+    @objc func handleVideoViewContainerTap(_ sender: UITapGestureRecognizer) {
+        if let player = player {
+            if player.rate == 0 {
+                self.playVideo()
+            } else {
+                self.pauseVideo()
+            }
+        }
+        
+    }
+    
     // MARK: - BUTTON ACTIONS
     @IBAction func btnOptionClicked(_ sender: UIButton) {
         optionBtnClicked?()
     }
-    
-    @IBAction func btnPlayClicked(_ sender: UIButton) {
-        self.playVideo()
-    }
-    
 }
 
 extension FeedTableCell {
