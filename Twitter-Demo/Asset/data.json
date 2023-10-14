@@ -15,20 +15,6 @@
         "viewsCount": "5.2M"
     },
     {
-        "profileImage": "ic_profile2",
-        "name":"Nikunj",
-        "handlerName": "NikunjHere",
-        "isVerified": false,
-        "postTime": "45m",
-        "postText": "Captain America: The First Avenger premiered at the El Capitan Theatre in Los Angeles on July 19, 2011, and was released in the United States on July 22, as part of Phase One of the MCU.",
-        "postImage": "",
-        "postVideo": "demoVideo1",
-        "commentCount": "29",
-        "retweetCount": "150",
-        "likesCount": "858",
-        "viewsCount": "4.5K"
-    },
-    {
         "profileImage": "ic_profile3",
         "name":"Kunj",
         "handlerName": "KunjOfficial",
@@ -37,6 +23,20 @@
         "postText": "The Hulk is a superhero appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Jack Kirby, the character first appeared in the debut issue of The Incredible Hulk.",
         "postImage": "ic_post2",
         "postVideo": "",
+        "commentCount": "29",
+        "retweetCount": "150",
+        "likesCount": "858",
+        "viewsCount": "4.5K"
+    },
+    {
+        "profileImage": "ic_profile2",
+        "name":"Nikunj",
+        "handlerName": "NikunjHere",
+        "isVerified": false,
+        "postTime": "45m",
+        "postText": "Captain America: The First Avenger premiered at the El Capitan Theatre in Los Angeles on July 19, 2011, and was released in the United States on July 22, as part of Phase One of the MCU.",
+        "postImage": "",
+        "postVideo": "demoVideo1",
         "commentCount": "29",
         "retweetCount": "150",
         "likesCount": "858",

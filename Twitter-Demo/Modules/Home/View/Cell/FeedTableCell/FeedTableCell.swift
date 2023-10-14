@@ -41,81 +41,78 @@ class FeedTableCell: UITableViewCell {
     
     var feedData: HomeModel? {
         didSet{
-            DispatchQueue.main.async {
+            //profile image
+            if let profileImage = UIImage(named: self.feedData?.profileImage ?? "") {
+                self.imgProfile.image = profileImage
+            }
+            
+            //name
+            if let name = self.feedData?.name {
+                self.lblName.text = name
+            }
+            
+            //isVerified
+            self.viewImgVerifiedContainer.isHidden = self.feedData?.isVerified ?? false
+            
+            //handlerName
+            if let handlerName = self.feedData?.handlerName {
+                self.lblHandlerName.text = "@\(handlerName)"
                 
-                //profile image
-                if let profileImage = UIImage(named: self.feedData?.profileImage ?? "") {
-                    self.imgProfile.image = profileImage
+                if let postTime = self.feedData?.postTime {
+                    self.lblHandlerName.text?.append(" - \(postTime)")
                 }
-                
-                //name
-                if let name = self.feedData?.name {
-                    self.lblName.text = name
-                }
-                
-                //isVerified
-                self.viewImgVerifiedContainer.isHidden = self.feedData?.isVerified ?? false
-                
-                //handlerName
-                if let handlerName = self.feedData?.handlerName {
-                    self.lblHandlerName.text = "@\(handlerName)"
-                    
-                    if let postTime = self.feedData?.postTime {
-                        self.lblHandlerName.text?.append(" - \(postTime)")
-                    }
-                }
-                
-                //postText
-                if let postText = self.feedData?.postText, postText != "" {
-                    self.lblTextPost.isHidden = false
-                    self.lblTextPost.text = postText
-                } else {
-                    self.lblTextPost.isHidden = true
-                }
-                
-                //postImage
-                if let postImage = self.feedData?.postImage, postImage != "" {
-                    self.imgPost.isHidden = false
-                    self.imgPost.image = UIImage(named: postImage)
-                } else {
-                    self.imgPost.isHidden = true
-                }
-                
-                //postVideo
-                if let postVideo = self.feedData?.postVideo, postVideo != "" {
-                    self.videoViewContainer.isHidden = false
-                    self.initializeVideoPlayer(videoName: postVideo)
-                } else {
-                    self.videoViewContainer.isHidden = true
-                }
-                
-                //commentCount
-                if let commentCount = self.feedData?.commentCount, commentCount != "" {
-                    self.self.lblCommentCount.text = commentCount
-                } else {
-                    self.lblCommentCount.text = "0"
-                }
-                
-                //retweetCount
-                if let retweetCount = self.feedData?.retweetCount, retweetCount != "" {
-                    self.lblRetweetCount.text = retweetCount
-                } else {
-                    self.lblRetweetCount.text = "0"
-                }
-                
-                //likesCount
-                if let likesCount = self.feedData?.likesCount, likesCount != "" {
-                    self.lblLikeCount.text = likesCount
-                } else {
-                    self.lblLikeCount.text = "0"
-                }
-                
-                //viewsCount
-                if let viewsCount = self.feedData?.viewsCount, viewsCount != "" {
-                    self.lblViewCount.text = viewsCount
-                } else {
-                    self.lblViewCount.text = "0"
-                }
+            }
+            
+            //postText
+            if let postText = self.feedData?.postText, postText != "" {
+                self.lblTextPost.isHidden = false
+                self.lblTextPost.text = postText
+            } else {
+                self.lblTextPost.isHidden = true
+            }
+            
+            //postImage
+            if let postImage = self.feedData?.postImage, postImage != "" {
+                self.imgPost.isHidden = false
+                self.imgPost.image = UIImage(named: postImage)
+            } else {
+                self.imgPost.isHidden = true
+            }
+            
+            //postVideo
+            if let postVideo = self.feedData?.postVideo, postVideo != "" {
+                self.videoViewContainer.isHidden = false
+                self.initializeVideoPlayer(videoName: postVideo)
+            } else {
+                self.videoViewContainer.isHidden = true
+            }
+            
+            //commentCount
+            if let commentCount = self.feedData?.commentCount, commentCount != "" {
+                self.self.lblCommentCount.text = commentCount
+            } else {
+                self.lblCommentCount.text = "0"
+            }
+            
+            //retweetCount
+            if let retweetCount = self.feedData?.retweetCount, retweetCount != "" {
+                self.lblRetweetCount.text = retweetCount
+            } else {
+                self.lblRetweetCount.text = "0"
+            }
+            
+            //likesCount
+            if let likesCount = self.feedData?.likesCount, likesCount != "" {
+                self.lblLikeCount.text = likesCount
+            } else {
+                self.lblLikeCount.text = "0"
+            }
+            
+            //viewsCount
+            if let viewsCount = self.feedData?.viewsCount, viewsCount != "" {
+                self.lblViewCount.text = viewsCount
+            } else {
+                self.lblViewCount.text = "0"
             }
         }
     }

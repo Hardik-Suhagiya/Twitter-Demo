@@ -56,10 +56,12 @@ extension HomeVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if let cell = cell as? FeedTableCell {
-            if self.isCellVisible(indexPath: indexPath) {
-                cell.playVideo()
-            } else {
-                cell.pauseVideo()
+            if cell.player != nil {
+                if self.isCellVisible(indexPath: indexPath) {
+                    cell.playVideo()
+                } else {
+                    cell.pauseVideo()
+                }
             }
         }
     }
